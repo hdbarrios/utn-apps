@@ -2,8 +2,6 @@
 
 // inicio de llamado
 include '../src/include/db_connect.php';
-no_cache();
-
 
 echo" <!doctype html>
     	<html lang='es'>
