@@ -2,7 +2,7 @@
 
 	try
 	{
-		$server='127.0.0.1'
+		$server='127.0.0.1';
 		$user='root';
 		$passwd='root';
 		$db='devops_app';
@@ -12,6 +12,6 @@
 	}
 	catch(PDOException $e)
 	{
-		echo $falla de conexion: ".$e->getMessage();
+		echo "Falla de conexion: ".$e->getMessage()."<br/>";
 	}
 ?>
