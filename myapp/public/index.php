@@ -23,12 +23,11 @@ echo" <!doctype html>
 	      </tr>
    ";
 
-	$v_titulo="SELECT * FROM `welcome` ORDER BY nombre DESC";
-	$restA = $connPDO -> query($v_titulo);
-	$v_t = $restA -> fetch();
 
-	#while ($v_t = $restA -> fetch(PDO::FETCH_ASSOC))
-	while ($v_t = $restA -> fetch())
+	$v_titulo=mysqli_query($conn, "SELECT * FROM `welcome` ORDER BY nombre ASC") or die("Error en: $busqueda: " . mysqli_error());
+	if (false === $v_titulo) { echo mysql_error(); }
+
+	while ($v_t=mysqli_fetch_array($v_titulo))
 	{
     		$nombre = $v_t['nombre'];
     		$email = $v_t['email'];
