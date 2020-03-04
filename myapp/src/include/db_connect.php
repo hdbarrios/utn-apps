@@ -1,27 +1,8 @@
 <?php
 
-	/*try
-	{
-		$server='127.0.0.1';
-		$user='root';
-		$passwd='root';
-		$db='devops_app';
+include 'env.php';
 
-		$opc=array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8");
-		$connPDO=new PDO('mysql:host='.$server.';dbname='.$db.'',$user,$passwd);
-	}
-	catch(PDOException $e)
-	{
-		echo "Falla de conexion: ".$e->getMessage()."<br/>";
-	}*/
-
-
-	$server='127.0.0.1';
-	$user='root';
-	$passwd='root';
-	$db='devops_app';
-
-	 $conn = mysqli_connect($server,$user,$passwd,$db);
+    $conn = mysqli_connect($ipv4_DB,$DB_USERNAME,$DB_PASSWORD,$DB_DATABASE);
   	// Check connection
   	if (mysqli_connect_errno())
  	 {
