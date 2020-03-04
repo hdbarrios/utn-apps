@@ -1,8 +1,13 @@
 <?php
 
-include 'env.php';
+#include 'env.php';
 
-    $conn = mysqli_connect($ipv4_DB,$DB_USERNAME,$DB_PASSWORD,$DB_DATABASE);
+$HOST_DB = getenv('HOST_DB');
+$DB_USERNAME = getenv('DB_USERNAME');
+$DB_PASSWORD = getenv('DB_PASSWORD');
+$DB_DATABASE = getenv('DB_DATABASE');
+
+    $conn = mysqli_connect($HOST_DB,$DB_USERNAME,$DB_PASSWORD,$DB_DATABASE);
   	// Check connection
   	if (mysqli_connect_errno())
  	 {
